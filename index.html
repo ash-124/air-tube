@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -12,11 +12,32 @@
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <nav>
+            <div class="navbar flex justify-between border-b-2 border-gray-100 py-4 w-11/12 mx-auto ">
+                <div >
+                    <a class="hover:cursor-pointer"><img src="./assets/Logo.png" alt=""></a>
+                </div>
+                <div >
+                    <div class="form-control">
+                        <input type="text" placeholder="Search" class="input input-bordered " />
+                    </div>
+                </div>
+                <div >
+                    <div class="btn mr-2 bg-red-300 hover:bg-red-100 py-2 px-8">Sort</div>
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img src="./assets/aiR.jpeg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
     <main></main>
     <footer></footer>
     <!-- js -->
-     <script src="./js/tube.js"></script>
+    <script src="./js/tube.js"></script>
 </body>
 
 </html>
