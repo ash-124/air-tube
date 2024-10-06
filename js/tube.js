@@ -33,9 +33,12 @@ const displayVideos = (video) => {
         </div>
         <div>
             <h2 class="font-bold">${element.title}</h2>
-            <div class="flex items-center gap-2>
+            <div class="flex flex-col  ">
+              <div class="flex gap-2">
                 <p class="text-gray-300">${element.authors[0].profile_name}</p>
-                <img class="w-5" src="https://img.icons8.com/?size=96&id=D9RtvkuOe31p&format=png" alt="">
+                ${element.authors[0].verified ? `<img class="w-5" src="https://img.icons8.com/?size=96&id=D9RtvkuOe31p&format=png" alt="">`: ""}
+              </div>
+                <p>${element.others.views} views </p>
             </div>
             <p></p>
         </div>
