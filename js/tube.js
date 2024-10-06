@@ -20,10 +20,11 @@ const displayVideos = (video) => {
     const card = document.createElement("div");
     card.classList =" card card-compact ";
     card.innerHTML = `
-    <figure class = "h-[200px]">
+    <figure class = "h-[200px] relative">
     <img class ="object-cover w-full h-full  "
       src=${element.thumbnail}
       alt="Shoes" />
+     ${element.others.posted_date.length === 0 ? "":`<span class="absolute right-2 bottom-2  text-xs bg-slate-600 text-white rounded-md p-2">${getTimeString(element.others.posted_date)}</span>`}
   </figure>
   <div class = "py-4">
     
@@ -58,5 +59,14 @@ const displayCategories = (data) => {
     categoryContainer.append(button);
   });
 };
+// convert the given data into day, hour, minute, second
+function getTimeString(time) {
+  //get Hour and rest seconds
+  const hour = parseInt(time / 3600);
+  let remainingSecond = time % 3600;
+  const minute = parseInt(remainingSecond / 60);
+  remainingSecond = remainingSecond % 60;
+  return `${hour} hour  ${minute} minute ${remainingSecond} second ago`;
+}
 fetchCategories();
 fetchVideos();
